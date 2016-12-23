@@ -47,8 +47,8 @@ Alcatel-Lucent SR-OS
 Enterasys  
 Extreme  
 F5 LTM  
-Fortinet 
-Checkpoint
+Fortinet  
+Checkpoint  
 
 
 <br>

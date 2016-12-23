@@ -29,6 +29,7 @@ from netmiko.paloalto import PaloAltoPanosSSH
 from netmiko.quanta import QuantaMeshSSH
 from netmiko.aruba import ArubaSSH
 from netmiko.vyos import VyOSSSH
+from netmiko.gaia import GaiaOsSSH
 
 # The keys of this dictionary are the supported device_types
 CLASS_MAPPER_BASE = {
@@ -78,6 +79,8 @@ CLASS_MAPPER = new_mapper
 
 # Add telnet drivers
 CLASS_MAPPER['cisco_ios_telnet'] = CiscoIosTelnet
+# Add gaia_os_driver for Checkpoint
+CLASS_MAPPER['gaia_os_ssh'] = GaiaOsSSH
 
 platforms = list(CLASS_MAPPER.keys())
 platforms.sort()

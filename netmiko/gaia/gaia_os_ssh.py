@@ -154,3 +154,13 @@ class GaiaOsSSH(CiscoSSHConnection):
             # if not self.check_enable_mode(check_string="."):
             #     raise ValueError("Failed to close session.")
         return output
+
+    def send_command(self, *args, **kwargs):
+
+        output = super(GaiaOsSSH, self).send_command(*args, **kwargs)
+
+        return output
+
+    def send_command_expect(self, *args, **kwargs):
+        """Backwards compaitibility."""
+        return self.send_command(*args, **kwargs)
